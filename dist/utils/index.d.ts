@@ -6,8 +6,13 @@ export declare const sendRequest: <ResponseData>(params: {
     url: string;
     method: string;
     body?: Record<string, unknown> | FormData;
+    type?: string;
 } | string) => Promise<{
     data?: ResponseData | undefined;
     error?: Error | undefined;
 }>;
+export declare const setLocalStorageChatflow: (chatflowid: string, chatId: string, saveObj?: Record<string, any>) => void;
+export declare const getLocalStorageChatflow: (chatflowid: string) => any;
+export declare const removeLocalStorageChatHistory: (chatflowid: string) => void;
+export declare const getBubbleButtonSize: (size: 'small' | 'medium' | 'large' | number | undefined) => number;
 //# sourceMappingURL=index.d.ts.map
